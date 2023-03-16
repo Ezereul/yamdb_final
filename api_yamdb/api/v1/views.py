@@ -11,7 +11,6 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
@@ -64,7 +63,7 @@ class UsersViewSet(viewsets.ModelViewSet):
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-def SignupView(request):
+def signup_view(request):
     """Регистрация пользователя."""
     serializer = SignUpSerializer(data=request.data)
     if not serializer.is_valid():
@@ -102,7 +101,7 @@ def SignupView(request):
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-def TokenView(request):
+def token_view(request):
     """Получение токена."""
     serializer = TokenSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)

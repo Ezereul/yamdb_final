@@ -4,8 +4,8 @@ import logging
 from django.core.management import BaseCommand
 
 from api_yamdb.settings import BASE_DIR
-from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 from users.models import User
+from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 
 FILE_DIRS = 'static/data/'
 
