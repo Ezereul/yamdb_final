@@ -58,7 +58,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            touch .env
+            touch /home/ezereul/.env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> /home/ezereul/.env
             echo DB_NAME=${{ secrets.DB_NAME }} >> /home/ezereul/.env
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> /home/ezereul/.env
