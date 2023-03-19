@@ -2,10 +2,10 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
-COPY api_yamdb/requirements.txt .
+COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt --no-cache-dir
 
-COPY api_yamdb/ .
+COPY ./ .
 
-CMD ["gunicorn", "cho tut blyad napisat to", "--bind", "0:8000"]
+CMD ["gunicorn", "jopa.wsgi:application", "--bind", "0:8000"]
