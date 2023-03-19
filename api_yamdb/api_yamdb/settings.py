@@ -130,7 +130,7 @@ REST_FRAMEWORK = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = Path(BASE_DIR, 'sent_emails')
+# EMAIL_FILE_PATH = Path(BASE_DIR, 'sent_emails')
 
 EMAIL_FROM = 'from@yamdb.com'
 
